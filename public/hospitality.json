@@ -1,0 +1,62 @@
+[
+  {
+    "Image": "https://ibb.co/XpH7Z5H/hotel1",
+    "estate_title": "Grand Beachside Resort",
+    "id": 1,
+    "segment_name": "Hotels",
+    "description": "Luxurious beachfront resort with stunning ocean views, infinity pool, and world-class spa.",
+    "price": 350.0,
+    "Status": "rent",
+    "Area": "500 sq m",
+    "location": "Miami Beach, Florida",
+    "facilities": ["Living room", "Swimming pool", "Kitchen (in select rooms)"],
+    "View Property": "link/to/property/details"
+  },
+  {
+    "Image": "https://ibb.co/FKXNLDw",
+    "estate_title": "Cozy Mountain Lodge",
+    "id": 2,
+    "segment_name": "Lodges",
+    "description": "Charming lodge nestled in the mountains, perfect for nature getaways and winter sports.",
+    "price": 180.0,
+    "Status": "rent",
+    "Area": "300 sq m",
+    "location": "Lake Tahoe, California",
+    "facilities": [
+      "Living room with fireplace",
+      "Hot tub",
+      "Restaurant on-site"
+    ],
+    "View Property": "link/to/property/details"
+  },
+  {
+    "Image": "https://ibb.co/r68BS6W",
+    "estate_title": "Modern City Hotel",
+    "id": 3,
+    "segment_name": "Hotels",
+    "description": "Sleek and stylish hotel in the heart of the city, ideal for business travelers and urban explorers.",
+    "price": 220.0,
+    "Status": "rent",
+    "Area": "40 sq m",
+    "location": "Chicago, Illinois",
+    "facilities": ["Fitness center", "Business center", "Rooftop bar"],
+    "View Property": "link/to/property/details"
+  },
+  {
+    "Image": "https://ibb.co/g94GHx4",
+    "estate_title": "Tranquil Eco-Resort",
+    "id": 4,
+    "segment_name": "Resorts",
+    "description": "Sustainable and eco-friendly resort surrounded by rainforest, offering yoga retreats and wellness activities.",
+    "price": 400.0,
+    "Status": "rent",
+    "Area": "Varies (bungalows)",
+    "location": "Costa Rica",
+    "facilities": [
+      "Private balcony/terrace",
+      "Spa treatments",
+      "On-site nature trails"
+    ],
+    "View Property": "link/to/property/details"
+  }
+]

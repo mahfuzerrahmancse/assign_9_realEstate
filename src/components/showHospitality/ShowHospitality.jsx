@@ -14,7 +14,7 @@ const ShowHospitality = () => {
 
   return (
     <div>
-      <h2 className="text-2xl text-center font-bold">
+      <h2 className="text-2xl text-center font-bold mt-4">
         This is hospitalities page:{hospitalities.length}
       </h2>
 

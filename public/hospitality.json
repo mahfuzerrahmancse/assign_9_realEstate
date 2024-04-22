@@ -1,62 +1,96 @@
 [
   {
-    "Image": "https://ibb.co/XpH7Z5H/hotel1",
+    "image": "https://i.ibb.co/K9jd8rt/hotel1.jpg",
     "estate_title": "Grand Beachside Resort",
     "id": 1,
     "segment_name": "Hotels",
     "description": "Luxurious beachfront resort with stunning ocean views, infinity pool, and world-class spa.",
     "price": 350.0,
-    "Status": "rent",
-    "Area": "500 sq m",
+    "status": "rent",
+    "area": "500 sq m",
     "location": "Miami Beach, Florida",
     "facilities": ["Living room", "Swimming pool", "Kitchen (in select rooms)"],
-    "View Property": "link/to/property/details"
+    "view_property": "link/to/property/details"
   },
   {
-    "Image": "https://ibb.co/FKXNLDw",
+    "image": "https://i.ibb.co/Zd19mVp/lodges.jpg",
     "estate_title": "Cozy Mountain Lodge",
     "id": 2,
     "segment_name": "Lodges",
     "description": "Charming lodge nestled in the mountains, perfect for nature getaways and winter sports.",
     "price": 180.0,
-    "Status": "rent",
-    "Area": "300 sq m",
+    "status": "rent",
+    "area": "300 sq m",
     "location": "Lake Tahoe, California",
     "facilities": [
       "Living room with fireplace",
       "Hot tub",
       "Restaurant on-site"
     ],
-    "View Property": "link/to/property/details"
+    "view_property": "link/to/property/details"
   },
   {
-    "Image": "https://ibb.co/r68BS6W",
+    "image": "https://i.ibb.co/X7zh44H/hotel2.jpg",
     "estate_title": "Modern City Hotel",
     "id": 3,
     "segment_name": "Hotels",
     "description": "Sleek and stylish hotel in the heart of the city, ideal for business travelers and urban explorers.",
     "price": 220.0,
-    "Status": "rent",
-    "Area": "40 sq m",
+    "status": "rent",
+    "area": "40 sq m",
     "location": "Chicago, Illinois",
     "facilities": ["Fitness center", "Business center", "Rooftop bar"],
-    "View Property": "link/to/property/details"
+    "view_property": "link/to/property/details"
   },
   {
-    "Image": "https://ibb.co/g94GHx4",
+    "image": "https://i.ibb.co/1skWVRk/resorts.jpg",
     "estate_title": "Tranquil Eco-Resort",
     "id": 4,
     "segment_name": "Resorts",
     "description": "Sustainable and eco-friendly resort surrounded by rainforest, offering yoga retreats and wellness activities.",
     "price": 400.0,
-    "Status": "rent",
-    "Area": "Varies (bungalows)",
+    "status": "rent",
+    "area": "Varies (bungalows)",
     "location": "Costa Rica",
     "facilities": [
       "Private balcony/terrace",
       "Spa treatments",
       "On-site nature trails"
     ],
-    "View Property": "link/to/property/details"
+    "view_property": "link/to/property/details"
+  },
+  {
+    "image": "https://i.ibb.co/7yDxJBD/hotel3.jpg",
+    "estate_title": "Seaside Boutique Hotel",
+    "id": 5,
+    "segment_name": "Hotels",
+    "description": "Intimate boutique hotel overlooking the ocean, featuring personalized service and beachfront dining.",
+    "price": 280.0,
+    "status": "rent",
+    "area": "120 sq m",
+    "location": "Santa Monica, California",
+    "facilities": [
+      "Ocean-view balconies",
+      "Gourmet restaurant",
+      "Spa services"
+    ],
+    "view_property": "link/to/property/details"
+  },
+  {
+    "image": "https://i.ibb.co/9srYT5R/resorts2.jpg",
+    "estate_title": "Rustic Forest Cabins",
+    "id": 6,
+    "segment_name": "Resorts",
+    "description": "Cozy cabins nestled in the woods, perfect for a quiet retreat and outdoor adventures.",
+    "price": 120.0,
+    "status": "rent",
+    "area": "80 sq m",
+    "location": "Asheville, North Carolina",
+    "facilities": [
+      "Wood-burning stove",
+      "Hiking trails nearby",
+      "Outdoor seating area"
+    ],
+    "view_property": "link/to/property/details"
   }
 ]

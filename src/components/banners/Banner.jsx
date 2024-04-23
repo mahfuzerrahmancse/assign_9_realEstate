@@ -1,4 +1,3 @@
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -7,41 +6,58 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-// import "./styles.css";
-
 // import required modules
-import { Pagination, Navigation } from "swiper/modules";
-import chef02 from '../../assets/images/chef02.jpg'
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+
+// import ban_resort from "../../assets/images/ban_resort.jpg";
+// import ban_hotel from "../../assets/images/ban_hotel.jpg";
+// import ban_lodge3 from "../../assets/images/ban_lodge3.jpg";
+// import ban_lodge from "../../assets/images/ban_lodge.jpg";
 
 const Banner = () => {
   return (
     <div>
-      <h2 className="mb-4 pb-4">Banner Section</h2>
+      
       <>
         <Swiper
-          className=" w-full"
-          pagination={{
-            type: "progressbar",
-          }}
+          className=" "
+          cssMode={true}
+          slidesPerView={1}
+          spaceBetween={30}
+          loop={true}
           navigation={true}
-          modules={[Pagination, Navigation]}
-          //   className="mySwiper"
+          pagination={{
+            clickable: true,
+          }}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          
         >
           <SwiperSlide>
-            Slide 1
-            <img className=" w-full bg-center bg-cover" src={chef02} />
+            <img
+              className="w-full bg-center bg-contain"
+              src="https://i.ibb.co/ChjVXS8/ban-resort.jpg"
+            />
           </SwiperSlide>
           <SwiperSlide>
-            Slide 2
-            <img className=" w-full bg-center bg-cover" src={chef02} />
+            <img
+              className=" w-full bg-center bg-cover"
+              src="https://i.ibb.co/ZNVxKrP/ban-hotel.jpg"
+            />
           </SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
+          <SwiperSlide>
+            <img
+              className=" w-full bg-center bg-cover"
+              src="https://i.ibb.co/Rj88hJS/ban-lodge3.jpg"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              className=" w-full bg-center bg-cover"
+              src="https://i.ibb.co/tB81VB4/ban-lodge.jpg"
+            />
+          </SwiperSlide>
         </Swiper>
       </>
     </div>

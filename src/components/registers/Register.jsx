@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
-// import {
-//   createUserWithEmailAndPassword,
-//   sendEmailVerification,
-//   updateProfile,
-// } from "firebase/auth";
-// import auth from "../firebases/firebase.config";
+
+import {
+  createUserWithEmailAndPassword  
+} from "firebase/auth";
+
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-
+import auth from "../../firebase/firebase.config";
 
 
 const Register = () => {
@@ -42,36 +41,22 @@ const Register = () => {
         return;
       }
 
-    //   createUserWithEmailAndPassword(auth, email, password)
-    //     .then((result) => {
-    //       console.log(result.user);
-    //       setSuccess("User created successfully");
-
-    //       // update profile
-    //       updateProfile(result.user, {
-    //         displayName: name,
-    //         photoURL: "https://example.com/jane-q-user/profile.jpg",
-    //       })
-    //         .then(() => console.log("profile updated"))
-    //         .catch();
-
-    //       // send verification email
-    //       sendEmailVerification(result.user)
-    //         .then(() => {
-    //           alert("please check your email & verify your account");
-    //         })
-    //         .catch();
-    //     })
-    //     .catch((error) => {
-    //       // console.error(error);
-    //       setRegisterError(error.message);
-    //       // console.log("error.message:", error.message);
-    //     });
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((result) => {
+          console.log(result.user);
+          setSuccess("User created successfully");
+        })
+          
+        .catch((error) => {
+          console.error(error);
+          setRegisterError(error.message);
+          console.log("error.message:", error.message);
+        });
     };
 
     return (
       <div>
-        <h2>Please Register</h2>
+        <h2 className="text-2xl py-4 text-center">Please Register</h2>
         <div className="mx-auto md:w-1/2">
           {/* <h2 className="text-2xl mb-4">Please Register</h2> */}
           <form onSubmit={handleRegister}>

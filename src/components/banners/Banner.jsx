@@ -17,10 +17,9 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 const Banner = () => {
   return (
     <div>
-      
       <>
         <Swiper
-          className=" "
+          className="max-h-screen "
           cssMode={true}
           slidesPerView={1}
           spaceBetween={30}
@@ -32,11 +31,10 @@ const Banner = () => {
           mousewheel={true}
           keyboard={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-          
         >
           <SwiperSlide>
             <img
-              className="w-full bg-center bg-contain"
+              className=" bg-center bg-contain"
               src="https://i.ibb.co/ChjVXS8/ban-resort.jpg"
             />
           </SwiperSlide>

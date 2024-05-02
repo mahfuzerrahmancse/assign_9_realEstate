@@ -1,7 +1,13 @@
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
+import auth from "../../firebase/firebase.config";
+import { useState } from "react";
 
 
 const Login = () => {
+
+    const [loginError, setLoginError] = useState("");
+    const [success, setSuccess] = useState("");
 
     const handleLogin = (e) => {
       e.preventDefault();
@@ -10,28 +16,27 @@ const Login = () => {
       console.log("email,password:", email, password);
 
       // reset error
-    //   setRegisterError("");
-    //   setSuccess("");
+      setLoginError("");
+      setSuccess("");
 
-    //   // add Validation
-    //   signInWithEmailAndPassword(auth, email, password)
-    //     .then((result) => {
-    //       console.log(result.user);
-    //       if (result.user.emailVerified) {
-    //         setSuccess("User logged in successfully");
-    //       } else alert("please verify your email address");
-    //     })
-    //     .catch((error) => {
-    //       console.error(error);
-    //       setRegisterError(error.message);
-    //     });
+      // add Validation
+      signInWithEmailAndPassword(auth, email, password)
+        .then((result) => {
+          console.log(result.user);
+          // if (result.user.emailVerified) {
+            setSuccess("User logged in successfully");
+          // } else alert("please verify your email address");
+        })
+        .catch((error) => {
+          console.error(error);
+          setLoginError("Please provide valid Email & Password");
+        });
     };
 
     return (
       <div>
-        <h2>Please Login</h2>
+        <h2 className="text-2xl py-4 text-center">Please Login</h2>
         <div className="mx-auto md:w-1/2">
-          {/* <h2 className="text-2xl mb-4">Please Login</h2> */}
           <form onSubmit={handleLogin}>
             <input
               className="mb-4 p-2 w-full"
@@ -67,8 +72,8 @@ const Login = () => {
               value="Login"
             />
           </form>
-          {/* {registerError && <p className="text-red-700"> {registerError} </p>} */}
-          {/* {success && <p className="text-green-700"> {success} </p>} */}
+          {loginError && <p className="text-red-700"> {loginError} </p>}
+          {success && <p className="text-green-700"> {success} </p>}
           <p>
             New to register?Please <Link to="/register">Register</Link>{" "}
           </p>

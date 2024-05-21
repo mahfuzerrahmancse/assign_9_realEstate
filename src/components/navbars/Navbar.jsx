@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -7,13 +7,24 @@ const Navbar = () => {
       <>
         <li>
           {" "}
-          <NavLink to="/">Home</NavLink>{" "}
+          <NavLink className="mr-2" to="/">
+            Home
+          </NavLink>{" "}
         </li>
         <li>
-          <NavLink to="/about">About</NavLink>
+          <NavLink className="mr-2" to="/about">
+            About
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/login">Login</NavLink>
+          <NavLink className="mr-2" to="/updateProfile">
+            Update Profile
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="mr-2" to="/userProfile">
+            User Profile
+          </NavLink>
         </li>
         <li>
           <NavLink to="/register">Register</NavLink>
@@ -51,12 +62,13 @@ const Navbar = () => {
           <a className="btn btn-ghost text-xl">RealEstate</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {navLinks}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn">
+            {" "}
+            <Link to='/login'>Login</Link>{" "}
+          </a>
         </div>
       </div>
     );

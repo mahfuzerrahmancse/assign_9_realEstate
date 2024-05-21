@@ -58,13 +58,20 @@ const Register = () => {
       <div>
         <h2 className="text-2xl py-4 text-center">Please Register</h2>
         <div className="mx-auto md:w-1/2">
-          {/* <h2 className="text-2xl mb-4">Please Register</h2> */}
           <form onSubmit={handleRegister}>
             <input
               className="mb-4 p-2 w-full"
               type="text"
               name="name"
-              placeholder="enter name"
+              placeholder="Enter Name"
+              required
+            />
+            <br />
+            <input
+              className="mb-4 p-2 w-full"
+              type="text"
+              name="photoUrl"
+              placeholder="Enter Photo Url"
               required
             />
             <br />
@@ -72,7 +79,7 @@ const Register = () => {
               className="mb-4 p-2 w-full"
               type="email"
               name="email"
-              placeholder="enter email"
+              placeholder="Enter Email"
               required
             />
             <br />
@@ -81,7 +88,7 @@ const Register = () => {
                 className=" mb-4 p-2 w-full"
                 type={showPassword ? "text" : "password"}
                 name="password"
-                placeholder="enter password"
+                placeholder="Enter Password"
                 required
               />
               <span
@@ -108,7 +115,7 @@ const Register = () => {
           {registerError && <p className="text-red-700"> {registerError} </p>}
           {success && <p className="text-green-700"> {success} </p>}
           <p>
-            Already have an account? Please <Link to="/login">Login</Link>{" "}
+            Already have an account? Please{" "}<Link className="text-blue-600" to="/login">Login here</Link>{" "}
           </p>
         </div>
       </div>

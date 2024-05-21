@@ -18,7 +18,7 @@ const ShowHospitality = () => {
         This is hospitalities page:{hospitalities.length}
       </h2>
 
-      <div className="grid lg:grid-cols-3 sm:grid-cols-1  gap-4">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-1   gap-4">
         {hospitalities.map((hospitality) => (
           <Hospitality key={hospitality.id} hospitality={hospitality}></Hospitality>
         ))}

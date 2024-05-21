@@ -43,7 +43,7 @@ const Login = () => {
               type="email"
               name="email"
               //   ref={emailRef}
-              placeholder="enter email"
+              placeholder="Enter Email"
               required
             />
             <br />
@@ -52,7 +52,7 @@ const Login = () => {
                 className=" mb-4 p-2 w-full"
                 type="password"
                 name="password"
-                placeholder="enter password"
+                placeholder="Enter Password"
                 required
               />
             </div>
@@ -75,7 +75,7 @@ const Login = () => {
           {loginError && <p className="text-red-700"> {loginError} </p>}
           {success && <p className="text-green-700"> {success} </p>}
           <p>
-            New to register?Please <Link to="/register">Register</Link>{" "}
+            New to register? Please <Link className="text-blue-600" to="/register">Register here</Link>{" "}
           </p>
         </div>
       </div>

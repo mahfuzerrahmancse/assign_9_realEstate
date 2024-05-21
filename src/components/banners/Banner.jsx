@@ -16,48 +16,46 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
 const Banner = () => {
   return (
-    <div>
-      <>
-        <Swiper
-          className="max-h-screen "
-          cssMode={true}
-          slidesPerView={1}
-          spaceBetween={30}
-          loop={true}
-          navigation={true}
-          pagination={{
-            clickable: true,
-          }}
-          mousewheel={true}
-          keyboard={true}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-        >
-          <SwiperSlide>
-            <img
-              className=" bg-center bg-contain"
-              src="https://i.ibb.co/ChjVXS8/ban-resort.jpg"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              className=" w-full bg-center bg-cover"
-              src="https://i.ibb.co/ZNVxKrP/ban-hotel.jpg"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              className=" w-full bg-center bg-cover"
-              src="https://i.ibb.co/Rj88hJS/ban-lodge3.jpg"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              className=" w-full bg-center bg-cover"
-              src="https://i.ibb.co/tB81VB4/ban-lodge.jpg"
-            />
-          </SwiperSlide>
-        </Swiper>
-      </>
+    <div className="max-w-[1200px] max-h-[400px] mx-auto mb-4">
+      <Swiper
+        className="max-h-[400px] "
+        cssMode={true}
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        navigation={true}
+        pagination={{
+          clickable: true,
+        }}
+        mousewheel={true}
+        keyboard={true}
+        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+      >
+        <SwiperSlide>
+          <img
+            className=" bg-center bg-cover"
+            src="https://i.ibb.co/ChjVXS8/ban-resort.jpg"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="  bg-center bg-cover"
+            src="https://i.ibb.co/ZNVxKrP/ban-hotel.jpg"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="  bg-center bg-cover"
+            src="https://i.ibb.co/Rj88hJS/ban-lodge3.jpg"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="  bg-center bg-cover"
+            src="https://i.ibb.co/tB81VB4/ban-lodge.jpg"
+          />
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 };

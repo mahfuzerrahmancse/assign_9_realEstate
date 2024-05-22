@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 
-import {
-  createUserWithEmailAndPassword  
-} from "firebase/auth";
 
-import { useState } from "react";
+
+import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import auth from "../../firebase/firebase.config";
+
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+  // console.log("name:", createUser);
 
     const [registerError, setRegisterError] = useState("");
     const [success, setSuccess] = useState("");
@@ -18,10 +19,18 @@ const Register = () => {
     const handleRegister = (e) => {
       e.preventDefault();
       const name = e.target.name.value;
+      const photo = e.target.photoUrl.value;
       const email = e.target.email.value;
       const password = e.target.password.value;
       const accepted = e.target.terms.checked;
-      console.log("email,password submitted:", name, email, password, accepted);
+      console.log(
+        "name,photo,email,password submitted:",
+        name,
+        photo,
+        email,
+        password,
+        accepted
+      );
       // reset error
       setRegisterError("");
       setSuccess("");
@@ -41,14 +50,15 @@ const Register = () => {
         return;
       }
 
-      createUserWithEmailAndPassword(auth, email, password)
+      // create user in firebase
+      createUser(email, password)
         .then((result) => {
-          console.log(result.user);
+          console.log('result user:',result.user);
           setSuccess("User created successfully");
         })
-          
+
         .catch((error) => {
-          console.error(error);
+          console.error("error user:", error);
           setRegisterError(error.message);
           console.log("error.message:", error.message);
         });
@@ -64,7 +74,7 @@ const Register = () => {
               type="text"
               name="name"
               placeholder="Enter Name"
-              required
+              
             />
             <br />
             <input
@@ -72,7 +82,7 @@ const Register = () => {
               type="text"
               name="photoUrl"
               placeholder="Enter Photo Url"
-              required
+              
             />
             <br />
             <input

@@ -7,6 +7,8 @@ import Login from "../components/logins/Login";
 import Register from "../components/registers/Register";
 import ProfileUpdate from "../components/profiles/ProfileUpdate";
 import ProfileUser from "../components/profiles/ProfileUser";
+import PrivateRoute from "./PrivateRoute";
+import PropertyDetail from "../components/showHospitality/PropertyDetail";
 
 const router = createBrowserRouter([
   {
@@ -19,8 +21,20 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "/propertyDetail/:id",
+        element: (
+          <PrivateRoute>
+            <PropertyDetail />
+          </PrivateRoute>
+        ),
+      },
+      {
         path: "/about",
-        element: <About />,
+        element: (
+          <PrivateRoute>
+            <About />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",

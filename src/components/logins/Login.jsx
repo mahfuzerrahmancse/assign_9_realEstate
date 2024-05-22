@@ -1,10 +1,13 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
+
 import { Link } from "react-router-dom";
-import auth from "../../firebase/firebase.config";
-import { useState } from "react";
+
+import { useContext, useState } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const Login = () => {
+  const { signInUser } = useContext(AuthContext);
+  // console.log("sign In User:", signInUser);
 
     const [loginError, setLoginError] = useState("");
     const [success, setSuccess] = useState("");
@@ -19,16 +22,16 @@ const Login = () => {
       setLoginError("");
       setSuccess("");
 
-      // add Validation
-      signInWithEmailAndPassword(auth, email, password)
+      // sign in user in firebase
+      signInUser(email, password)
         .then((result) => {
-          console.log(result.user);
+          console.log("sign In result User:", result.user);
           // if (result.user.emailVerified) {
-            setSuccess("User logged in successfully");
+          setSuccess("User logged in successfully");
           // } else alert("please verify your email address");
         })
         .catch((error) => {
-          console.error(error);
+          console.error("sign In error User:", error);
           setLoginError("Please provide valid Email & Password");
         });
     };

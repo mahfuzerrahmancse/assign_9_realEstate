@@ -14,8 +14,8 @@ const ShowHospitality = () => {
 
   return (
     <div>
-      <h2 className="text-2xl text-center font-bold mt-4">
-        This is hospitalities page:{hospitalities.length}
+      <h2 className="text-2xl text-center font-bold mt-6 mb-2">
+        Our Most Attractive Services
       </h2>
 
       <div className="grid lg:grid-cols-3 sm:grid-cols-1   gap-4">

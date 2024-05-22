@@ -9,13 +9,7 @@ const Hospitality = ({ hospitality }) => {
     estate_title,
     id,
     segment_name,
-    description,
-    price,
-    status,
-    area,
-    location,
-    facilities,
-    view_property,
+    description
   } = hospitality;
 
   return (

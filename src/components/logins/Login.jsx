@@ -26,9 +26,9 @@ const Login = () => {
       signInUser(email, password)
         .then((result) => {
           console.log("sign In result User:", result.user);
-          // if (result.user.emailVerified) {
+          
           setSuccess("User logged in successfully");
-          // } else alert("please verify your email address");
+          
         })
         .catch((error) => {
           console.error("sign In error User:", error);
@@ -45,7 +45,7 @@ const Login = () => {
               className="mb-4 p-2 w-full"
               type="email"
               name="email"
-              //   ref={emailRef}
+              
               placeholder="Enter Email"
               required
             />
@@ -62,7 +62,7 @@ const Login = () => {
             <br />
             <label className="label">
               <a
-                // onClick={handleForgetPassword}
+                
                 className="label-text-alt link link-hover"
               >
                 Forget Password

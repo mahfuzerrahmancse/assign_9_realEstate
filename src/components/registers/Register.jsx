@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
-
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-
 import { AuthContext } from "../../providers/AuthProvider";
-
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -72,7 +69,6 @@ const Register = () => {
               type="text"
               name="name"
               placeholder="Enter Name"
-              
             />
             <br />
             <input
@@ -80,7 +76,6 @@ const Register = () => {
               type="text"
               name="photoUrl"
               placeholder="Enter Photo Url"
-              
             />
             <br />
             <input
@@ -123,7 +118,10 @@ const Register = () => {
           {registerError && <p className="text-red-700"> {registerError} </p>}
           {success && <p className="text-green-700"> {success} </p>}
           <p>
-            Already have an account? Please{" "}<Link className="text-blue-600" to="/login">Login here</Link>{" "}
+            Already have an account? Please{" "}
+            <Link className="text-blue-600" to="/login">
+              Login here
+            </Link>{" "}
           </p>
         </div>
       </div>

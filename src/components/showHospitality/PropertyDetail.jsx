@@ -43,7 +43,7 @@ const PropertyDetail = () => {
               {property.location}
             </p>
             <div className="card-actions justify-end">
-              <Link to='/contact'>
+              <Link to="/contact">
                 <button className="btn btn-primary">Contact</button>
               </Link>
             </div>

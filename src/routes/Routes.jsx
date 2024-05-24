@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         path: "/contact",
         element: (
           <PrivateRoute>
-            <Contact/>
+            <Contact />
           </PrivateRoute>
         ),
       },
@@ -43,11 +43,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/updateProfile",
-        element: <ProfileUpdate />,
+        element: (
+          <PrivateRoute>
+            <ProfileUpdate />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/userProfile",
-        element: <ProfileUser />,
+        element: (
+          <PrivateRoute>
+            <ProfileUser />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/register",

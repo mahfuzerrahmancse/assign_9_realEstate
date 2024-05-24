@@ -12,7 +12,7 @@ const Contact = () => {
           <p>Bangladesh</p>
           <p className="mt-2">Phone: (214) 979-6100</p>
           <p>Email: info@cbre.com</p>
-        </div>
+        </div> 
         <div>
           <h4 className="font-semibold">CBRE Group, Inc.</h4>
           <p>2100 McKinney Ave #1250</p>

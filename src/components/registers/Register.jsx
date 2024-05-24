@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -6,6 +6,8 @@ import { AuthContext } from "../../providers/AuthProvider";
 const Register = () => {
   const { createUser } = useContext(AuthContext);
   // console.log("name:", createUser);
+  const location = useLocation();
+  const navigate = useNavigate();
 
     const [registerError, setRegisterError] = useState("");
     const [success, setSuccess] = useState("");
@@ -50,6 +52,8 @@ const Register = () => {
         .then((result) => {
           console.log('result user:',result.user);
           setSuccess("User created successfully");
+          navigate(location.state ? location.state : '/');
+          
         })
 
         .catch((error) => {

@@ -10,7 +10,7 @@ const ShowHospitality = () => {
       .then((response) => response.json())
       .then((data) => setHospitality(data));
   }, []);
-  console.log("hospitalities show connect:", hospitalities);
+  // console.log("hospitalities show connect:", hospitalities);
 
   return (
     <div>

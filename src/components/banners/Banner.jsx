@@ -9,14 +9,11 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
-// import ban_resort from "../../assets/images/ban_resort.jpg";
-// import ban_hotel from "../../assets/images/ban_hotel.jpg";
-// import ban_lodge3 from "../../assets/images/ban_lodge3.jpg";
-// import ban_lodge from "../../assets/images/ban_lodge.jpg";
+
 
 const Banner = () => {
   return (
-    <div className="max-w-[1200px] max-h-[400px] mx-auto mb-4">
+    <div className="max-w-[1200px] max-h-[400px]  mx-auto mb-4">
       <Swiper
         className="max-h-[400px] "
         cssMode={true}
@@ -33,25 +30,25 @@ const Banner = () => {
       >
         <SwiperSlide>
           <img
-            className=" bg-center bg-cover"
+            className=""
             src="https://i.ibb.co/ChjVXS8/ban-resort.jpg"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="  bg-center bg-cover"
+            className="bg-no-repeat bg-cover image-full bg-center"
             src="https://i.ibb.co/ZNVxKrP/ban-hotel.jpg"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="  bg-center bg-cover"
+            className="bg-no-repeat bg-cover image-full bg-center"
             src="https://i.ibb.co/Rj88hJS/ban-lodge3.jpg"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            className="  bg-center bg-cover"
+            className="bg-no-repeat bg-cover image-full bg-center"
             src="https://i.ibb.co/tB81VB4/ban-lodge.jpg"
           />
         </SwiperSlide>

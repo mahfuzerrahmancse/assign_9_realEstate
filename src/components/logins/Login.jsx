@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { signInUser, signInGoogle, signInGithub } = useContext(AuthContext);
@@ -25,8 +26,13 @@ const Login = () => {
 
       // sign in user email & password based in firebase
       signInUser(email, password)
+      
         .then((result) => {
           console.log("sign In result User:", result.user);
+          Swal.fire({
+            icon: "success",
+            text: "User logged in successfully!",
+          })
           setSuccess("User logged in successfully");
           navigate(location?.state ? location.state : '/');
         })
@@ -41,6 +47,11 @@ const Login = () => {
       signInGoogle()
       .then( result => {
         console.log('google logged in:',result.user);
+        navigate(location?.state ? location.state : "/");
+        Swal.fire({
+          icon: "success",
+          text: "User logged in successfully!",
+        });
       } )
       .catch( error => {
         console.error(error);
@@ -51,7 +62,12 @@ const Login = () => {
 
       signInGithub()
       .then( result => {
-        console.log('sign in github:',result.user);
+        console.log('github logged in:',result.user);
+        navigate(location?.state ? location.state : "/");
+        Swal.fire({
+          icon: "success",
+          text: "User logged in successfully!",
+        });
       } )
       .catch( error => {
         console.error(error);

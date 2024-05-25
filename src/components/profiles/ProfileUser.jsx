@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const ProfileUser = () => {
 
   const {user} = useContext(AuthContext);
-  console.log('user detail:',user);
+  // console.log('user detail:',user);
 
 
     return (
@@ -20,11 +20,10 @@ const ProfileUser = () => {
             </div>
             <p className="text-lg font-semibold">Email: {user.email}</p>
 
-            <div className="card-actions flex justify-center items-center ">
-              <button className="btn btn-primary w-full">
-                {" "}
-                <Link to="/updateProfile">Edit</Link>{" "}
-              </button>
+            <div className="card-actions flex justify-center items-center">
+              <Link to="/updateProfile" className="w-full">
+                <button className="btn btn-primary w-full">Edit</button>
+              </Link>
             </div>
           </div>
         </div>

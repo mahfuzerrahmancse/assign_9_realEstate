@@ -3,13 +3,11 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { Link } from "react-router-dom";
 
 
-
 const ProfileUser = () => {
 
   const {user} = useContext(AuthContext);
   console.log('user detail:',user);
 
-  
 
     return (
       <div>

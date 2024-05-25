@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 const ProfileUpdate = () => {
@@ -16,7 +18,7 @@ const ProfileUpdate = () => {
       photoURL: photo,
     })
       .then(() => {
-        alert("Profile updated successfully");
+        toast("Profile updated successfully!");
       })
       .catch((error) => {
         alert("Error updating profile");
@@ -36,7 +38,6 @@ const ProfileUpdate = () => {
                 type="text"
                 name="name"
                 placeholder={user.displayName}
-                
               />
               <br />
               <input
@@ -44,7 +45,6 @@ const ProfileUpdate = () => {
                 type="text"
                 name="photoUrl"
                 placeholder={user.photoURL}
-                
               />
               <br />
               <input
@@ -60,6 +60,7 @@ const ProfileUpdate = () => {
                 Update
               </button>
             </form>
+            <ToastContainer />
           </div>
         </div>
       </div>

@@ -3,8 +3,9 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
-  const { signInUser } = useContext(AuthContext);
+  const { signInUser, signInGoogle, signInGithub } = useContext(AuthContext);
   // console.log("sign In User:", signInUser);
+  // console.log("sign In Google:", signInGoogle);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const Login = () => {
       setLoginError("");
       setSuccess("");
 
-      // sign in user in firebase
+      // sign in user email & password based in firebase
       signInUser(email, password)
         .then((result) => {
           console.log("sign In result User:", result.user);
@@ -32,8 +33,30 @@ const Login = () => {
         .catch((error) => {
           console.error("sign In error User:", error);
           setLoginError("Please provide valid Email & Password");
-        });
+        });      
     };
+    const handleGoogle = () => {
+      // console.log('google sign in:');
+
+      signInGoogle()
+      .then( result => {
+        console.log('google logged in:',result.user);
+      } )
+      .catch( error => {
+        console.error(error);
+      } )
+    }
+    const handleGithub = () => {
+      // console.log('github connected');
+
+      signInGithub()
+      .then( result => {
+        console.log('sign in github:',result.user);
+      } )
+      .catch( error => {
+        console.error(error);
+      } )
+    }
 
     return (
       <div>
@@ -71,8 +94,12 @@ const Login = () => {
           <div className="my-2">
             <p className="text-center font-semibold pb-2">... OR ...</p>
             <div className="grid grid-cols-1 gap-4">
-              <button className="btn btn-secondary ">Google</button>
-              <button className="btn btn-secondary">Github</button>
+              <button onClick={handleGoogle} className="btn btn-secondary ">
+                Google
+              </button>
+              <button onClick={handleGithub} className="btn btn-secondary">
+                Github
+              </button>
             </div>
           </div>
           {loginError && <p className="text-red-700"> {loginError} </p>}

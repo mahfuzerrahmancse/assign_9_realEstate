@@ -25,6 +25,6 @@
 5. google firebase-tools,
 6. react-helmet,
 7. react-toastify,
-8. lordicon/element,
+8. lordicon,
 9. lottie-web,
 10.sweet alert

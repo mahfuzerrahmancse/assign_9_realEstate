@@ -5,7 +5,7 @@ import data from "../../../public/hospitality.json";
 const PropertyDetail = () => {
 
   const { id } = useParams();
-  // console.log('property id:',id);
+  
   const property = data.find((item) => item.id === parseInt(id));
 
   if (!property) {
